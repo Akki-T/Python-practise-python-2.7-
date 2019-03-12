@@ -1,0 +1,20 @@
+#Opening file in read mode using open() with inputs as file name and mode
+fp = open ('demo.txt', 'r')
+
+#to print name of the file:
+print ("Name of the file", fp.name)
+
+#Print content of the file
+print(fp.read())
+#read only 10 characters
+print(fp.read(10))
+
+
+#writing content to a file
+content = fp.readlines ()
+fp1 = open ("output.txt", 'w')
+fp1.writelines (content)
+
+#closing a file
+fp.close ()
+fp1.close ()
